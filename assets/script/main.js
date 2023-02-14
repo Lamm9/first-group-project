@@ -9,7 +9,7 @@ $(function() {
     var score = 0;
 
     swQuiz = function() {
-        //window.location.href ="./sw-quiz.html";
+        //window.location.replace("./sw-quiz.html");
 
         fetch(swAPI)
         .then((response) => response.json())
@@ -22,7 +22,6 @@ $(function() {
         var swImage = $('#sw-img');
         var swQuestion = $('#sw-question');
         var swAnswerList = $('#sw-quiz-answers');
-        var questionDiv = $('#question-div') 
 
         fetch(swAPIPeople)
         .then((response) => response.json())
@@ -47,7 +46,7 @@ $(function() {
 
         {question: "what color is Darth Vader's lightsaber?",
     
-        answers: ['3']
+        answers: ['Green','Blue','Purple','Red']
 
         },
 
@@ -58,28 +57,31 @@ $(function() {
         },
     ]
 
-        $(swQuestion).text(content[0].question);
+        var currentQuestion = 0;
 
-        $(swAnswer1).text(content[0].answers[0])
-        $(swAnswer2).text(content[0].answers[1])
-        $(swAsnwer3).text(content[0].answers[2])
-        $(swAnswer4).text(content[0].answers[3])
+        $(swQuestion).text(content[currentQuestion].question);
 
-        swAnswerList.on('click', function() {
-            swQuestion.text(content[1].question);
+        $(swAnswer1).text(content[currentQuestion].answers[0])
+        $(swAnswer2).text(content[currentQuestion].answers[1])
+        $(swAsnwer3).text(content[currentQuestion].answers[2])
+        $(swAnswer4).text(content[currentQuestion].answers[3])
 
-            swAnswer1.text(content[1].answers[0])
-            swAnswer2.text(content[1].answers[1])
-            swAsnwer3.text(content[1].answers[2])
-            swAnswer4.text(content[1].answers[3])
+        swAnswerList.on('click',function() {
+            currentQuestion++; 
+            
+            $(swQuestion).text(content[currentQuestion].question);
+
+            $(swAnswer1).text(content[currentQuestion].answers[0])
+            $(swAnswer2).text(content[currentQuestion].answers[1])
+            $(swAsnwer3).text(content[currentQuestion].answers[2])
+            $(swAnswer4).text(content[currentQuestion].answers[3])
         })
-        
 
     }
 
     //$(disneyBtn).on('click',disneyQuiz());
 
-    $(swBtn).on('click',swQuiz());
+    swBtn.on('click',swQuiz());
 
     //$(pokemonBtn).on('click',pokemonQuiz());
 })
