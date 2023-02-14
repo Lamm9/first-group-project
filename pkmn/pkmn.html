@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Who's That Pokemon?</title>
+    <link rel="stylesheet" href="src/reset.css">
+    <link rel="stylesheet" href="src/pkmn.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="./src/pokemon.svg" alt="Pokemon Logo" class="pokemon-logo">
+            <h1 class="quiz-title">Who's That Pokemon?</h1>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="question">
+                <h2 class="question__text"></h2>
+            </div>
+            <div class="score">
+                <h3 class="score__text"></h3>
+            </div>
+        </div>
+    </main>
+
+    <div class="answers">
+        <div class="container">
+            <ul class="answers-list">
+                <li>
+                    <button class="btn btn--answer" id="a"></button>
+                </li>
+                <li>
+                    <button class="btn btn--answer" id="b"></button>
+                </li>
+                <li>
+                    <button class="btn btn--answer" id="c"></button>
+                </li>
+                <li>
+                    <button class="btn btn--answer" id="d"></button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="info">
+            <h3 class="project-name">Who's That Pokemon?</h3>
+
+        </div>
+    </footer>
+
+    <div class="modal">
+        <img class="oak" src="src/profokido.png" alt="Professor Oak">
+        <h2 class="summary">Let's see what you know about Pokemon!</h2>
+        <h2 class="rating">Answer these questions to test your knowledge.</h2>
+        <button class="btn btn--start gradient-border">START QUIZ</button>
+    </div>
+
+    <script src="src/pkmn.js"></script>
+</body>
+
+</html>
