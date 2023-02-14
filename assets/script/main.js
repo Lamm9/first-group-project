@@ -3,6 +3,16 @@ $(function() {
     var swBtn = $('#quiz2');
     var pokemonBtn = $('#quiz3');
 
+    var pokemonURL = 'https://pokeapi.co/api/v2/';
+
+    var swAPI = 'https://swapi.dev/api/';
+    var swAPIPeople = 'https://swapi.dev/api/people/';
+    var swAPIPlanets = 'https://swapi.dev/api/planets/';
+    var score = 0;
+
+    swQuiz = function() {
+        //window.location.replace("./sw-quiz.html");
+
     var swAPI = 'https://swapi.dev/api/';
     var swAPIPeople = 'https://swapi.dev/api/people/';
     var swAPIPlanets = 'https://swapi.dev/api/planets/';
@@ -85,3 +95,4 @@ $(function() {
 
     //$(pokemonBtn).on('click',pokemonQuiz());
 })
+
