@@ -35,7 +35,9 @@ DisneyAPI - https://disneyapi.dev/
 
 PokeAPI - https://pokeapi.co/
 
-Marvel API - https://developer.marvel.com/docs
+SWAPI Star Wars API - https://swapi.dev/ 
+
+jQuery - https://jquery.com/ 
 
 ## License
 
