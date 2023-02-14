@@ -2,6 +2,23 @@ $(function() {
     var disneyBtn = $('#quiz1');
     var swBtn = $('#quiz2');
     var pokemonBtn = $('#quiz3');
+    var disneyURL = 'https://disneyapi.dev/';
+    var marvelURL = 'https://gateway.marvel.com/v1';
+    var pokemonURL = 'https://pokeapi.co/api/v2/';
+
+<<<<<<< HEAD
+    var swAPI = 'https://swapi.dev/api/';
+    var swAPIPeople = 'https://swapi.dev/api/people/';
+    var swAPIPlanets = 'https://swapi.dev/api/planets/';
+    var score = 0;
+
+    swQuiz = function() {
+        //window.location.replace("./sw-quiz.html");
+
+=======
+    fetch(disneyURL, {})
+    fetch(marvelURL, {})
+    fetch(pokemonURL, {})
 
     var swAPI = 'https://swapi.dev/api/';
     var swAPIPeople = 'https://swapi.dev/api/people/';
@@ -11,6 +28,7 @@ $(function() {
     swQuiz = function() {
         //window.location.replace("./sw-quiz.html");
 
+>>>>>>> 84795a62c7d39f7661d21d0b4017b2a9ce895f8e
         fetch(swAPI)
         .then((response) => response.json())
         .then((data) => console.log(data))
