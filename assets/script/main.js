@@ -3,12 +3,17 @@ $(function() {
     var swBtn = $('#quiz2');
     var pokemonBtn = $('#quiz3');
 
-    var swURL = 'https://swapi.dev/api/';
+    var swAPI = 'https://swapi.dev/api/';
+    var swAPIPeople = 'https://swapi.dev/api/people/';
+    var swAPIPlanets = 'https://swapi.dev/api/planets/';
+    var score = 0;
 
     swQuiz = function() {
-        window.location.href ="/sw-quiz.html";
+        //window.location.href ="./sw-quiz.html";
 
-        fetch(swURL);
+        fetch(swAPI)
+        .then((response) => response.json())
+        .then((data) => console.log(data))
 
         var swAnswer1 = $('#sw-answer-1');
         var swAnswer2 = $('#sw-answer-2');
@@ -16,48 +21,59 @@ $(function() {
         var swAnswer4 = $('#sw-answer-4');
         var swImage = $('#sw-img');
         var swQuestion = $('#sw-question');
+        var swAnswerList = $('#sw-quiz-answers');
+        var questionDiv = $('#question-div') 
+
+        fetch(swAPIPeople)
+        .then((response) => response.json())
+        .then((data) => console.log(data))
+
+        fetch(swAPIPlanets)
+        .then((response) => response.json())
+        .then((data) => console.log(data))
         
         var content = [
-        {question: 'What lightsaber color best suits you?',
+        {question: 'What planet is Luke from?',
 
-        answers: ['Blue', 'Green','Red','Purple']
+        answers: ['Tattooine', 'Hoth', 'Endor', 'Mars']
     
         },
     
-        {question: 'Which Jedi master would you train with?',
+        {question: "Who is Luke's dad?",
 
-        answers: ['2']
+        answers: ['Obi Wan Kenobi','Yoda','Dexter Jettster','Anakin']
     
         },
 
-        {question: 'What species would your space companion be?',
+        {question: "what color is Darth Vader's lightsaber?",
     
         answers: ['3']
 
         },
 
-        {question: 'What faction would you fight for?',
+        {question: 'What about the droid attack on the Wookiees?',
     
         answers: ['4']
     
         },
     ]
 
-        swImage.href = 
+        $(swQuestion).text(content[0].question);
 
-        $(swAnswer1)
-        $(swAnswer2)
-        $(swAsnwer3)
-        $(swAnswer4)
+        $(swAnswer1).text(content[0].answers[0])
+        $(swAnswer2).text(content[0].answers[1])
+        $(swAsnwer3).text(content[0].answers[2])
+        $(swAnswer4).text(content[0].answers[3])
 
-        for (i=0;i<content.length;i++) {
-            $(swQuestion).append('<h2>'+content[i].question+'</h2>');
+        swAnswerList.on('click', function() {
+            swQuestion.text(content[1].question);
 
-            $(swAnswer1).append('<li>'+content[0].answers[0]+'</li>')
-            $(swAnswer2).textContent = content[0].answers[1]
-            $(swAsnwer3).textContent = content[0].answers[2]
-            $(swAnswer4).textContent = content[0].answers[3]
-        }
+            swAnswer1.text(content[1].answers[0])
+            swAnswer2.text(content[1].answers[1])
+            swAsnwer3.text(content[1].answers[2])
+            swAnswer4.text(content[1].answers[3])
+        })
+        
 
     }
 
