@@ -10,7 +10,8 @@ html {
     display: flex;
     position: relative;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 45px;
+    margin-top: 45px;
 }
 
 #sw-img {
