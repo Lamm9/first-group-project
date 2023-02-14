@@ -1,18 +1,12 @@
 $(function() {
-    var disneyBtn = $('#quiz1');
     var swBtn = $('#quiz2');
-    var pokemonBtn = $('#quiz3');
-
-    var pokemonURL = 'https://pokeapi.co/api/v2/';
-
-    var swAPI = 'https://swapi.dev/api/';
-    var swAPIPeople = 'https://swapi.dev/api/people/';
-    var swAPIPlanets = 'https://swapi.dev/api/planets/';
-    var score = 0;
 
     swQuiz = function() {
 
+    //base URL
     var swAPI = 'https://swapi.dev/api/';
+
+    //level 1 URLs
     var swAPIPeople = 'https://swapi.dev/api/people/';
     var swAPIPlanets = 'https://swapi.dev/api/planets/';
     var score = 0;
@@ -21,11 +15,11 @@ $(function() {
         .then((response) => response.json())
         .then((data) => console.log(data))
 
+        //DOM variable declarations
         var swAnswer1 = $('#sw-answer-1');
         var swAnswer2 = $('#sw-answer-2');
         var swAsnwer3 = $('#sw-answer-3');
         var swAnswer4 = $('#sw-answer-4');
-        var swImage = $('#sw-img');
         var swQuestion = $('#sw-question');
         var swAnswerList = $('#sw-quiz-answers');
 
@@ -37,6 +31,7 @@ $(function() {
         .then((response) => response.json())
         .then((data) => console.log(data))
         
+        //questions
         var content = [
         {question: 'What planet is Luke from?',
 
@@ -77,15 +72,28 @@ $(function() {
 
         var currentQuestion = 0;
 
+        endQuiz = function() {
+            swQuestion.hide();
+            swAnswerList.hide();
+        }
+
+        //set first question
         $(swQuestion).text(content[currentQuestion].question);
 
         $(swAnswer1).text(content[currentQuestion].answers[0])
         $(swAnswer2).text(content[currentQuestion].answers[1])
         $(swAsnwer3).text(content[currentQuestion].answers[2])
         $(swAnswer4).text(content[currentQuestion].answers[3])
-        
+
+        if(currentQuestion > content.length) {
+            endQuiz();
+        }
+
+        //change question on click
         swAnswerList.on('click',function() {
-            currentQuestion++; 
+            currentQuestion++;
+            
+
             
             $(swQuestion).text(content[currentQuestion].question);
 
@@ -93,15 +101,12 @@ $(function() {
             $(swAnswer2).text(content[currentQuestion].answers[1])
             $(swAsnwer3).text(content[currentQuestion].answers[2])
             $(swAnswer4).text(content[currentQuestion].answers[3])
-            
+
         })
 
     }
+    
+    swQuiz()
 
-    $(disneyBtn).on('click',disneyQuiz());
-
-    swBtn.on('click',swQuiz());
-
-    $(pokemonBtn).on('click',pokemonQuiz());
 }
 )
