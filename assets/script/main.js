@@ -11,15 +11,11 @@ $(function() {
     var score = 0;
 
     swQuiz = function() {
-        //window.location.replace("./sw-quiz.html");
 
     var swAPI = 'https://swapi.dev/api/';
     var swAPIPeople = 'https://swapi.dev/api/people/';
     var swAPIPlanets = 'https://swapi.dev/api/planets/';
     var score = 0;
-
-    swQuiz = function() {
-        //window.location.replace("./sw-quiz.html");
 
         fetch(swAPI)
         .then((response) => response.json())
@@ -54,7 +50,7 @@ $(function() {
     
         },
 
-        {question: "what color is Darth Vader's lightsaber?",
+        {question: "What color is Darth Vader's lightsaber?",
     
         answers: ['Green','Blue','Purple','Red']
 
@@ -62,9 +58,21 @@ $(function() {
 
         {question: 'What about the droid attack on the Wookiees?',
     
-        answers: ['4']
+        answers: ['Is this a joke?','Yes it is feel free to select an answer.','What if I dont want to?','just pick one.']
     
         },
+
+        {question: "Where do the Ewoks live?",
+    
+        answers: ['Europe','Endor','Mandalore','Hoth']
+        
+        },
+
+        {question: "Who shot first?",
+    
+        answers: ['Han Solo','Jar Jar Binks','Count Dooku','Greedo']
+        
+        }
     ]
 
         var currentQuestion = 0;
@@ -75,7 +83,7 @@ $(function() {
         $(swAnswer2).text(content[currentQuestion].answers[1])
         $(swAsnwer3).text(content[currentQuestion].answers[2])
         $(swAnswer4).text(content[currentQuestion].answers[3])
-
+        
         swAnswerList.on('click',function() {
             currentQuestion++; 
             
@@ -85,6 +93,7 @@ $(function() {
             $(swAnswer2).text(content[currentQuestion].answers[1])
             $(swAsnwer3).text(content[currentQuestion].answers[2])
             $(swAnswer4).text(content[currentQuestion].answers[3])
+            
         })
 
     }
@@ -95,4 +104,4 @@ $(function() {
 
     //$(pokemonBtn).on('click',pokemonQuiz());
 }
-})
+)
