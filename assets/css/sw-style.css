@@ -1,0 +1,21 @@
+:root {
+    --blue: rgb(21, 11, 65);
+}
+
+html {
+    background-color: var(--blue);
+}
+
+#sw-quiz-image {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+#sw-img {
+    width:800px;
+    height:auto;
+    display:flex;
+    align-items: center;
+}
