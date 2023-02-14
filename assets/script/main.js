@@ -94,5 +94,5 @@ $(function() {
     swBtn.on('click',swQuiz());
 
     //$(pokemonBtn).on('click',pokemonQuiz());
+}
 })
-
