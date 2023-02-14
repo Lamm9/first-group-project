@@ -13,3 +13,24 @@ html {
     justify-content: space-evenly;
     align-items: center;
 }
+
+.button:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 white;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+img {
+    padding-top: 10rem;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+}

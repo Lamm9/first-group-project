@@ -98,10 +98,10 @@ $(function() {
 
     }
 
-    //$(disneyBtn).on('click',disneyQuiz());
+    $(disneyBtn).on('click',disneyQuiz());
 
     swBtn.on('click',swQuiz());
 
-    //$(pokemonBtn).on('click',pokemonQuiz());
+    $(pokemonBtn).on('click',pokemonQuiz());
 }
 )
