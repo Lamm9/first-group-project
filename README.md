@@ -3,7 +3,7 @@
 ## Description
 Welcome to Quizverse! This application is designed to captivate users with quizzes from different universes! 
 
-(insert screenshot here)
+![screenshot](./assets/img/Screenshot%20(5).png)
 
 ## Table of Contents
 - [Installation](#installation)
@@ -31,7 +31,7 @@ Harrison Lamm - https://github.com/Lamm9
 
 Bulma CSS Framework - https://bulma.io/
 
-DisneyAPI - https://disneyapi.dev/
+HP API - https://hp-api.onrender.com/ 
 
 PokeAPI - https://pokeapi.co/
 
