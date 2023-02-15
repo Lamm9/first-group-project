@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./first-group-project/assets/style.css">
+
+</head>
+
+<body style="color:rgb(73, 139, 197); text-align: center;">
+    <h3> Harry Potter Quiz </h3>
+    <img id="character-img">
+    <h4> Select the right name for this character: </h4>
+    <!-- <div>
+        <p id="answer-1" class="answer-card"></p>
+        <p id="answer-2" class="answer-card"></p>
+        <p id="answer-3" class="answer-card"></p>
+        <p id="asnwer-3" class="answer-card"></p>
+    </div> -->
+    <div class="radio-toolbar">
+        <div class="each-answer">
+            <input type="radio" name="answers" id="answer-1">
+            <label class="answer-card" for="answer-1"></label>
+        </div>
+        <br>
+        <div class="each-answer">
+            <input type="radio" name="answers" id="answer-2">
+            <label class="answer-card" for="answer-2"></label>
+        </div>
+        <br>
+        <div class="each-answer">
+            <input type="radio" name="answers" id="answer-3">
+            <label class="answer-card" for="answer-3"></label>
+        </div>
+        <br>
+        <div class="each-answer">
+            <input type="radio" name="answers" id="answer-4">
+            <label class="answer-card" for="answer-4"></label>
+        </div>
+    </div>
+    <br>
+    <hr>
+
+    <input id="submit-answer-bt" type="button" value="NEXT">
+
+    <h3 id="status"></h3>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="./harry-potter.js"></script>
+</body>
+
+</html>
