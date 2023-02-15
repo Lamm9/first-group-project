@@ -7,7 +7,7 @@ const statusElem = document.getElementById("status");
 
 // This variable is 1 less than actual number of questions
 const ROUND_COUNT = 9;
-const NEXT_QUESTION_WAIT_TIME = 1500;
+const NEXT_QUESTION_WAIT_TIME = 500;
 // global variables
 var idx = 0;
 var questions = Array()
